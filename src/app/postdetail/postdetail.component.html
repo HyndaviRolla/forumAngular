@@ -1,0 +1,12 @@
+<div>
+    <h2>Post Detail</h2>
+    <form (submit)="getPost()">
+      <label for="postId">Enter Post ID:</label>
+      <input type="number" id="postId" [(ngModel)]="postId" name="postId" required>
+      <button type="submit">Get Post</button>
+    </form>
+    <div *ngIf="post">
+      <h3>Post ID: {{ post.id }}</h3>
+      <p>Post Content: {{ post.content }}</p>
+    </div>
+  </div>
